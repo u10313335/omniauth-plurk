@@ -22,7 +22,7 @@ module OmniAuth
         consumer
       end
 
-      uid { raw_info['uid'].to_s }
+      uid { raw_info['id'].to_s }
 
       info do
         {
