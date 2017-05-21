@@ -13,7 +13,7 @@ module OmniAuth
           :access_token_path => '/OAuth/access_token',
           :authorize_path => '/OAuth/authorize',
           :request_token_path => '/OAuth/request_token',
-          :site => 'http://www.plurk.com',
+          :site => 'https://www.plurk.com',
         }
       end
 
@@ -29,8 +29,8 @@ module OmniAuth
           'name' => raw_info['full_name'],
           'nickname' => raw_info['display_name'] || raw_info['nick_name'],
           'location' => raw_info['location'],
-          'image' => raw_info['has_profile_image'] == 1 ? "http://avatars.plurk.com/#{raw_info['id']}-medium#{raw_info['avatar']}.gif" : 'http://www.plurk.com/static/default_medium.gif',
-          'urls' => {'Plurk' => 'http://plurk.com/' + raw_info['nick_name']},
+          'image' => raw_info['has_profile_image'] == 1 ? "https://avatars.plurk.com/#{raw_info['id']}-medium#{raw_info['avatar']}.gif" : 'https://www.plurk.com/static/default_medium.gif',
+          'urls' => {'Plurk' => 'https://plurk.com/' + raw_info['nick_name']},
         }
       end
 
